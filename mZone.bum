@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1481272987305" org.eventb.texttools.text_representation="machine mZone refines mAccess sees cZone&#10;variables position&#10;invariants&#10;@position_ty position∈ Personne→Zone&#10;events&#10;  event INITIALISATION&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_TOCdsL3oEeadiuo1wvDUBA" org.eventb.core.target="mAccess"/>
+<org.eventb.core.seesContext name="_NcR6cL3oEeadiuo1wvDUBA" org.eventb.core.target="cZone"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.variable name="_-ZaQ0L3qEeadiuo1wvDUBA" org.eventb.core.identifier="position"/>
+<org.eventb.core.invariant name="_-ZaQ0b3qEeadiuo1wvDUBA" org.eventb.core.label="position_ty" org.eventb.core.predicate="position∈ Personne→Zone"/>
+</org.eventb.core.machineFile>

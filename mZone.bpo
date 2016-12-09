@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.poIdentifier name="presents" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="presentt" org.eventb.core.predicate="presents⊆Personne" org.eventb.core.source="/Batiment/mAccess.bum|org.eventb.core.machineFile#mAccess|org.eventb.core.invariant#_greFcL3jEeadYayNSMJp4Q"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/position_ty/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#EVTALLHYPpresentt"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position'∈Personne → Zone" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_-ZaQ0b3qEeadiuo1wvDUBA"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Batiment/mAccess.bum|org.eventb.core.machineFile#mAccess|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_-ZaQ0b3qEeadiuo1wvDUBA"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poSequent#INITIALISATION\/position_ty\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTpresentt" org.eventb.core.parentSet="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poIdentifier name="presents'" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPpresentt" org.eventb.core.parentSet="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#EVTIDENTpresentt" org.eventb.core.poStamp="3"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/mZone.bpo|org.eventb.core.poFile#mZone|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_-ZaQ0b3qEeadiuo1wvDUBA"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scMachineFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scRefinesMachine name="'" org.eventb.core.scTarget="/Batiment/mAccess.bcm" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.refinesMachine#_TOCdsL3oEeadiuo1wvDUBA"/>
+<org.eventb.core.scSeesContext name="(" org.eventb.core.scTarget="/Batiment/cZone.bcc" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.seesContext#_NcR6cL3oEeadiuo1wvDUBA"/>
+<org.eventb.core.scInternalContext name="cAccess">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="F,Personne" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.carrierSet#_6lraIL3iEeadYayNSMJp4Q" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="cZone">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Batiment/cAccess.bcc|org.eventb.core.scContextFile#cAccess" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.extendsContext#_G21s8L3nEeadiuo1wvDUBA"/>
+<org.eventb.core.scAxiom name="cAccest" org.eventb.core.label="F,Zone" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cAccesu" org.eventb.core.label="exterieur_ty" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Exterieur" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.constant#_3QDv4L3nEeadiuo1wvDUBA" org.eventb.core.type="Zone"/>
+<org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.carrierSet#_YRBr4L3nEeadiuo1wvDUBA" org.eventb.core.type="ℙ(Zone)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInvariant name="cAccest" org.eventb.core.label="presents_ty" org.eventb.core.predicate="presents⊆Personne" org.eventb.core.source="/Batiment/mAccess.bum|org.eventb.core.machineFile#mAccess|org.eventb.core.invariant#_greFcL3jEeadYayNSMJp4Q" org.eventb.core.theorem="false"/>
+<org.eventb.core.scInvariant name="cAccesu" org.eventb.core.label="position_ty" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_-ZaQ0b3qEeadiuo1wvDUBA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scVariable name="position" org.eventb.core.abstract="false" org.eventb.core.concrete="true" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.variable#_-ZaQ0L3qEeadiuo1wvDUBA" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.scVariable name="presents" org.eventb.core.abstract="true" org.eventb.core.concrete="false" org.eventb.core.source="/Batiment/mAccess.bum|org.eventb.core.machineFile#mAccess|org.eventb.core.variable#_grdeYL3jEeadYayNSMJp4Q" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.scEvent name="presentt" org.eventb.core.accurate="false" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#'">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/Batiment/mAccess.bcm|org.eventb.core.scMachineFile#mAccess|org.eventb.core.scEvent#presentt" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#'"/>
+<org.eventb.core.scAction name="(" org.eventb.core.assignment="position :∣ ⊤" org.eventb.core.label="GEN" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#'"/>
+</org.eventb.core.scEvent>
+</org.eventb.core.scMachineFile>

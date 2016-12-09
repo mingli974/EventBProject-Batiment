@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1481270594193" org.eventb.texttools.text_representation="machine mAccess sees cAccess&#10;variables presents&#10;invariants&#10;&#9;@presents_ty presents ⊆ Personne&#10;events&#10;  event INITIALISATION&#10;  &#9;then&#10;  &#9;&#9;@a presents≔ ∅&#10;  end&#10;  event entrer_batiment&#10;  &#9;any p where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@g p∉ presents&#10;  &#9;then&#10;  &#9;&#9;@a presents ≔  presents∪ {p}&#10;  end&#10;  event sortir_batiment&#10;  &#9;any p where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@g p∈ presents&#10;  &#9;then&#10;  &#9;&#9;@a presents ≔ presents∖{p}&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.seesContext name="_3QlRIL3jEeadYayNSMJp4Q" org.eventb.core.target="cAccess"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="_grc3UL3jEeadYayNSMJp4Q" org.eventb.core.assignment="presents≔ ∅" org.eventb.core.label="a"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_grdeYL3jEeadYayNSMJp4Q" org.eventb.core.identifier="presents"/>
+<org.eventb.core.invariant name="_greFcL3jEeadYayNSMJp4Q" org.eventb.core.label="presents_ty" org.eventb.core.predicate="presents ⊆ Personne"/>
+<org.eventb.core.event name="_SKL7YL3lEeadiuo1wvDUBA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer_batiment">
+<org.eventb.core.parameter name="_SKNJgL3lEeadiuo1wvDUBA" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_SKNJgb3lEeadiuo1wvDUBA" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
+<org.eventb.core.guard name="_SKNwkL3lEeadiuo1wvDUBA" org.eventb.core.label="g" org.eventb.core.predicate="p∉ presents"/>
+<org.eventb.core.action name="_SKOXoL3lEeadiuo1wvDUBA" org.eventb.core.assignment="presents ≔  presents∪ {p}" org.eventb.core.label="a"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_zvsSYL3lEeadiuo1wvDUBA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="sortir_batiment">
+<org.eventb.core.parameter name="_zvtggL3lEeadiuo1wvDUBA" org.eventb.core.identifier="p"/>
+<org.eventb.core.guard name="_zvtggb3lEeadiuo1wvDUBA" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
+<org.eventb.core.guard name="_zvuHkL3lEeadiuo1wvDUBA" org.eventb.core.label="g" org.eventb.core.predicate="p∈ presents"/>
+<org.eventb.core.action name="_zvuHkb3lEeadiuo1wvDUBA" org.eventb.core.assignment="presents ≔ presents∖{p}" org.eventb.core.label="a"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
