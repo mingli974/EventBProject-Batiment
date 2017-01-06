@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1481271422391" org.eventb.texttools.text_representation="context cZone extends cAccess&#10;sets Zone&#10;constants Exterieur&#10;axioms&#10;&#9;@F.Zone finite(Zone)&#10;&#9;@exterieur_ty Exterieur∈Zone&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483632710835" org.eventb.texttools.text_representation="context cZone extends cAccess&#10;sets Zone&#10;constants Exterieur sortie&#10;axioms&#10;&#9;@F.Zone finite(Zone)&#10;&#9;@exterieur_ty Exterieur∈Zone&#10;&#9;@sortie sortie∈Zone∖{Exterieur} → Zone&#10;end&#10;" version="3">
 <org.eventb.core.extendsContext name="_G21s8L3nEeadiuo1wvDUBA" org.eventb.core.target="cAccess"/>
 <org.eventb.core.carrierSet name="_YRBr4L3nEeadiuo1wvDUBA" org.eventb.core.identifier="Zone"/>
 <org.eventb.core.axiom name="_YRCS8L3nEeadiuo1wvDUBA" org.eventb.core.label="F,Zone" org.eventb.core.predicate="finite(Zone)"/>
 <org.eventb.core.constant name="_3QDv4L3nEeadiuo1wvDUBA" org.eventb.core.identifier="Exterieur"/>
 <org.eventb.core.axiom name="_3QDv4b3nEeadiuo1wvDUBA" org.eventb.core.label="exterieur_ty" org.eventb.core.predicate="Exterieur∈Zone"/>
+<org.eventb.core.constant name="_vAPd8NNgEeahqsgRTa1UHw" org.eventb.core.identifier="sortie"/>
+<org.eventb.core.axiom name="_4WCIoNNgEeahqsgRTa1UHw" org.eventb.core.label="sortie" org.eventb.core.predicate="sortie∈Zone∖{Exterieur} → Zone"/>
 </org.eventb.core.contextFile>

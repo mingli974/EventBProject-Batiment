@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_4WCIoNNgEeahqsgRTa1UHw"/>
+<org.eventb.core.poIdentifier name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+<org.eventb.core.poPredicate name="autorisatioo" org.eventb.core.predicate="autorisation∈Personne → ℙ(Zone)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_fyTPgNPhEeazk9R8lTh06A"/>
+<org.eventb.core.poPredicate name="autorisatiop" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.poIdentifier name="presents" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="presentt" org.eventb.core.predicate="presents⊆Personne" org.eventb.core.source="/Batiment/mAccess.bum|org.eventb.core.machineFile#mAccess|org.eventb.core.invariant#_greFcL3jEeadYayNSMJp4Q"/>
+<org.eventb.core.poPredicate name="presentu" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_-ZaQ0b3qEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="presentv" org.eventb.core.predicate="position[presents]⊆Zone ∖ {Exterieur}" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_lI_w8MLWEeac-pSiHHMcyA"/>
+<org.eventb.core.poPredicate name="presentw" org.eventb.core.predicate="presents=position∼[Zone ∖ {Exterieur}]" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_bEbeQMLiEeac-pSiHHMcyA"/>
+<org.eventb.core.poPredicate name="presentx" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.invariant#_3N3uENNdEeahqsgRTa1UHw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="auto_ty/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ABSHYP"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p∈dom(position)∧position∈Personne ⇸ Zone∧p∈dom(autorisation)∧autorisation∈Personne ⇸ ℙ(Zone)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ABSHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/auto_ty/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="15">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTALLHYPcSecuritg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒{(Personne × {Exterieur})(p)}⊆autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBB"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poSequent#INITIALISATION\/auto_ty\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcSecuritg" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcSecuritg" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTIDENTcSecuritg" org.eventb.core.poStamp="14"/>
+<org.eventb.core.poSequent name="sortir_batiment/auto_ty/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTALLHYPcSecurith"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒{(position{p ↦ Exterieur})(p0)}⊆autorisation(p0)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBC"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNX2YNPhEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poSequent#sortir_batiment\/auto_ty\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcSecurith" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcSecurith" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTIDENTcSecurith" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_FA02cMLdEeac-pSiHHMcyA|org.eventb.core.guard#_FA1dgMLdEeac-pSiHHMcyA"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_FA02cMLdEeac-pSiHHMcyA|org.eventb.core.guard#_FA1dgcLdEeac-pSiHHMcyA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="changer_zone/auto_ty/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTALLHYPcSecuriti"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒{(position{p ↦ arrivee})(p0)}⊆autorisation(p0)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBD"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNZEgNPhEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poSequent#changer_zone\/auto_ty\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcSecuriti" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="arrivee" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="depart" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcSecuriti" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTIDENTcSecuriti" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBD|org.eventb.core.guard#_3N0DsNNdEeahqsgRTa1UHw"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrivee∈Zone ∖ {Exterieur,depart}" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBD|org.eventb.core.guard#_3N0DsdNdEeahqsgRTa1UHw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="depart∈Zone" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBD|org.eventb.core.guard#_3N1R0NNdEeahqsgRTa1UHw"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(p)=depart" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_NcR6cL3oEeadiuo1wvDUBD|org.eventb.core.guard#_3NzcotNdEeahqsgRTa1UHw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="suivre_sortie/auto_ty/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTALLHYPcSecuritj"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒{(position{p ↦ sortie(arrivee)})(p0)}⊆autorisation(p0)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.event#_6igqcNNkEea-_IsPEWhWKg"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNa5sdPhEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poSequent#suivre_sortie\/auto_ty\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcSecuritj" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poIdentifier name="arrivee" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcSecuritj" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTIDENTcSecuritj" org.eventb.core.poStamp="23">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_d5Yt4NNkEea-_IsPEWhWKg|org.eventb.core.guard#_d5ZU8tNkEea-_IsPEWhWKg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrivee∈Zone ∖ {Exterieur}" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_d5Yt4NNkEea-_IsPEWhWKg|org.eventb.core.guard#_d5Z8ANNkEea-_IsPEWhWKg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)∈Zone ∖ {arrivee,Exterieur}" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_d5Yt4NNkEea-_IsPEWhWKg|org.eventb.core.guard#_d5Z8AdNkEea-_IsPEWhWKg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="sortie(position(p))≠Exterieur" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_d5Yt4NNkEea-_IsPEWhWKg|org.eventb.core.guard#_hXU2INPtEeazk9R8lTh06A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="passer/arrivee_ty/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTHYPcSecuritk'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="p∈dom(autorisation)∧autorisation∈Personne ⇸ ℙ(Zone)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_HBY5oNPsEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_HBY5oNPsEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTHYPcSecuritk'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="passer/auto_ty/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTALLHYPcSecuritk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p0⦂Personne·p0∈Personne⇒{(position{p ↦ arrivee})(p0)}⊆autorisation(p0)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poSequent#passer\/auto_ty\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="passer/position/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTALLHYPcSecuritk"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="position{p ↦ arrivee}=position" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.action#_HBY5odPsEeazk9R8lTh06A"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poSequent#passer\/position\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcSecuritk" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="arrivee" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcSecuritk'" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTIDENTcSecuritk" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_HBYSkdPsEeazk9R8lTh06A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcSecuritk" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#EVTHYPcSecuritk'" org.eventb.core.poStamp="22">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrivee∈autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_HBY5oNPsEeazk9R8lTh06A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/mSecurite.bpo|org.eventb.core.poFile#mSecurite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="14">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒{position(p)}⊆autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

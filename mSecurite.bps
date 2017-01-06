@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="auto_ty/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="14" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/auto_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="15" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sortir_batiment/auto_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="19" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="changer_zone/auto_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="suivre_sortie/auto_ty/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="23" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/arrivee_ty/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/auto_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="passer/position/EQL" org.eventb.core.confidence="0" org.eventb.core.poStamp="22" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>
