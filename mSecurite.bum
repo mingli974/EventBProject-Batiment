@@ -1,24 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483692215879" org.eventb.texttools.text_representation="machine mSecurite refines mZoneFusion sees cSecurite&#10;variables position&#10;invariants&#10;&#9;@auto_ty ∀p·p∈Personne⇒ {position(p)}⊆autorisation(p)&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event sortir_batiment extends sortir_batiment&#10;  end&#10;  event changer_zone extends changer_zone&#10;  end&#10;  event suivre_sortie extends suivre_sortie&#10;  end&#10;  event passer&#10;  &#9;any p arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@arrivee_ty arrivee ∈ autorisation(p)&#10;  &#9;then&#10;  &#9;&#9;@a position(p) ≔ arrivee&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1484170317868" org.eventb.texttools.text_representation="machine mSecurite refines mZoneFusion sees cSecurite&#10;variables position&#10;invariants&#10;&#9;@auto_ty ∀p·p∈Personne⇒ {position(p)}⊆autorisation(p)//si p est à une position alors il y est autorisé&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event entrer_batiment refines entrer_batiment&#10;  &#9;any p arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@zone_ty arrivee ∈ Zone&#10;  &#9;&#9;@g1 position(p) = Exterieur&#10;&#9;&#9;@g2 position(p) ≠ arrivee&#10;&#9;&#9;@g3 arrivee ∈ autorisation(p)&#10;  &#9;then&#10;&#9;&#9;@a position(p) ≔ arrivee&#10;  end&#10;  event sortir_batiment extends sortir_batiment&#10;  end&#10;  event passer refines changer_zone&#10;  &#9;any p depart arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@arrivee_ty arrivee ∈ Zone∖{Exterieur,depart}&#10;  &#9;&#9;@depart_ty depart ∈ Zone&#10;  &#9;&#9;@g1 position(p)= depart&#10;  &#9;&#9;@g2 arrivee ∈ autorisation(p)&#10;  &#9;then&#10;&#9;&#9;@a position(p) ≔ arrivee&#10;  end&#10;  event suivre_sortie refines suivre_sortie&#10;  &#9;any p arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@zone_ty arrivee ∈ Zone∖{Exterieur}&#10;  &#9;&#9;@g1 position(p)∈ Zone∖{arrivee,Exterieur}&#10;  &#9;&#9;@g2 sortie(position(p))∈ Zone∖{Exterieur}&#10;  &#9;&#9;@g3 sortie(arrivee)∈ Zone∖{Exterieur}&#10;  &#9;&#9;@g4 arrivee ∈ autorisation(p)&#10;  &#9;&#9;@g5 sortie(arrivee)∈ autorisation(p)&#10;  &#9;then&#10;  &#9;&#9;@a position(p) ≔ sortie(arrivee)&#10;  end&#10;end&#10;" version="5">
 <org.eventb.core.refinesMachine name="_owyNcNPhEeazk9R8lTh06A" org.eventb.core.target="mZoneFusion"/>
 <org.eventb.core.seesContext name="_vjrugNPqEeazk9R8lTh06A" org.eventb.core.target="cSecurite"/>
 <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
-<org.eventb.core.event name="_vNX2YNPhEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir_batiment">
-<org.eventb.core.refinesEvent name="_vNX2YdPhEeazk9R8lTh06A" org.eventb.core.target="sortir_batiment"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="_vNZEgNPhEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="changer_zone">
-<org.eventb.core.refinesEvent name="_vNZEgdPhEeazk9R8lTh06A" org.eventb.core.target="changer_zone"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="_vNa5sdPhEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivre_sortie">
-<org.eventb.core.refinesEvent name="_vNbgwNPhEeazk9R8lTh06A" org.eventb.core.target="suivre_sortie"/>
-</org.eventb.core.event>
-<org.eventb.core.variable name="_XeP5MNPiEeazk9R8lTh06A" org.eventb.core.identifier="position"/>
-<org.eventb.core.invariant name="_Wp8AAdPlEeazk9R8lTh06A" org.eventb.core.label="auto_ty" org.eventb.core.predicate="∀p·p∈Personne⇒ {position(p)}⊆autorisation(p)"/>
-<org.eventb.core.event name="_Wp8nENPlEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.event name="_vNX2YNPhEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="entrer_batiment">
+<org.eventb.core.refinesEvent name="_ETxKINXLEea26oeQIULimg" org.eventb.core.target="entrer_batiment"/>
 <org.eventb.core.parameter name="_HBXrgNPsEeazk9R8lTh06A" org.eventb.core.identifier="p"/>
 <org.eventb.core.parameter name="_HBYSkNPsEeazk9R8lTh06A" org.eventb.core.identifier="arrivee"/>
 <org.eventb.core.guard name="_HBYSkdPsEeazk9R8lTh06A" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
-<org.eventb.core.guard name="_HBY5oNPsEeazk9R8lTh06A" org.eventb.core.label="arrivee_ty" org.eventb.core.predicate="arrivee ∈ autorisation(p)"/>
+<org.eventb.core.guard name="_HBY5oNPsEeazk9R8lTh06A" org.eventb.core.label="zone_ty" org.eventb.core.predicate="arrivee ∈ Zone"/>
+<org.eventb.core.guard name="_bFiRwNXLEea26oeQIULimg" org.eventb.core.label="g1" org.eventb.core.predicate="position(p) = Exterieur"/>
+<org.eventb.core.guard name="_GAsJgNXMEea26oeQIULimg" org.eventb.core.label="g2" org.eventb.core.predicate="position(p) ≠ arrivee"/>
 <org.eventb.core.action name="_HBY5odPsEeazk9R8lTh06A" org.eventb.core.assignment="position(p) ≔ arrivee" org.eventb.core.label="a"/>
+<org.eventb.core.guard name="_U2pbsdXNEea26oeQIULimg" org.eventb.core.label="g3" org.eventb.core.predicate="arrivee ∈ autorisation(p)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_vNZEgNPhEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir_batiment">
+<org.eventb.core.refinesEvent name="_ETxKIdXLEea26oeQIULimg" org.eventb.core.target="sortir_batiment"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_vNa5sdPhEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.refinesEvent name="_ETxxMNXLEea26oeQIULimg" org.eventb.core.target="changer_zone"/>
+<org.eventb.core.parameter name="_U2o0oNXNEea26oeQIULimg" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_-hKgENXPEea26oeQIULimg" org.eventb.core.identifier="depart"/>
+<org.eventb.core.parameter name="_U2pbsNXNEea26oeQIULimg" org.eventb.core.identifier="arrivee"/>
+<org.eventb.core.guard name="_U2qCwNXNEea26oeQIULimg" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
+<org.eventb.core.guard name="_-hLHINXPEea26oeQIULimg" org.eventb.core.label="arrivee_ty" org.eventb.core.predicate="arrivee ∈ Zone∖{Exterieur,depart}"/>
+<org.eventb.core.guard name="_U2qCwdXNEea26oeQIULimg" org.eventb.core.label="depart_ty" org.eventb.core.predicate="depart ∈ Zone"/>
+<org.eventb.core.guard name="_bDXcoNXNEea26oeQIULimg" org.eventb.core.label="g1" org.eventb.core.predicate="position(p)= depart"/>
+<org.eventb.core.action name="_U2qCwtXNEea26oeQIULimg" org.eventb.core.assignment="position(p) ≔ arrivee" org.eventb.core.label="a"/>
+<org.eventb.core.guard name="_bDXcodXNEea26oeQIULimg" org.eventb.core.label="g2" org.eventb.core.predicate="arrivee ∈ autorisation(p)"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_XeP5MNPiEeazk9R8lTh06A" org.eventb.core.identifier="position"/>
+<org.eventb.core.invariant name="_Wp8AAdPlEeazk9R8lTh06A" org.eventb.core.comment="si p est à une position alors il y est autorisé" org.eventb.core.label="auto_ty" org.eventb.core.predicate="∀p·p∈Personne⇒ {position(p)}⊆autorisation(p)"/>
+<org.eventb.core.event name="_Wp8nENPlEeazk9R8lTh06A" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="suivre_sortie">
+<org.eventb.core.refinesEvent name="_ETxxMdXLEea26oeQIULimg" org.eventb.core.target="suivre_sortie"/>
+<org.eventb.core.guard name="_bDYDsNXNEea26oeQIULimg" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
+<org.eventb.core.parameter name="_-hM8UNXPEea26oeQIULimg" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_-hM8UdXPEea26oeQIULimg" org.eventb.core.identifier="arrivee"/>
+<org.eventb.core.guard name="_-hNjYNXPEea26oeQIULimg" org.eventb.core.label="zone_ty" org.eventb.core.predicate="arrivee ∈ Zone∖{Exterieur}"/>
+<org.eventb.core.guard name="_-hNjYdXPEea26oeQIULimg" org.eventb.core.label="g1" org.eventb.core.predicate="position(p)∈ Zone∖{arrivee,Exterieur}"/>
+<org.eventb.core.guard name="_-hOKcNXPEea26oeQIULimg" org.eventb.core.label="g2" org.eventb.core.predicate="sortie(position(p))∈ Zone∖{Exterieur}"/>
+<org.eventb.core.guard name="_-hOKcdXPEea26oeQIULimg" org.eventb.core.label="g3" org.eventb.core.predicate="sortie(arrivee)∈ Zone∖{Exterieur}"/>
+<org.eventb.core.action name="_-hOxgNXPEea26oeQIULimg" org.eventb.core.assignment="position(p) ≔ sortie(arrivee)" org.eventb.core.label="a"/>
+<org.eventb.core.guard name="_KOVR0dXQEea26oeQIULimg" org.eventb.core.label="g4" org.eventb.core.predicate="arrivee ∈ autorisation(p)"/>
+<org.eventb.core.guard name="_KOV44NXQEea26oeQIULimg" org.eventb.core.label="g5" org.eventb.core.predicate="sortie(arrivee)∈ autorisation(p)"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

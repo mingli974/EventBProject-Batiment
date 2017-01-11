@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483691623999" org.eventb.texttools.text_representation="context cSecurite extends cZone&#10;constants autorisation&#10;axioms&#10;&#9;@auto autorisation ∈ Personne→ ℙ(Zone)&#10;&#9;@auto_ext ∀p·p∈Personne⇒ Exterieur ∈ autorisation(p)&#10;end&#10;" version="3">
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1484170166742" org.eventb.texttools.text_representation="context cSecurite extends cZone&#10;constants autorisation&#10;axioms&#10;&#9;@auto autorisation ∈ Personne→ ℙ(Zone) //une personne a un ensemble de zones autorisées&#10;&#9;@auto_ext ∀p·p∈Personne⇒ Exterieur ∈ autorisation(p) //l'extétieur fait partie des zones autorisées&#10;end&#10;" version="3">
 <org.eventb.core.extendsContext name="_FNJV0NPhEeazk9R8lTh06A" org.eventb.core.target="cZone"/>
 <org.eventb.core.constant name="_JMpRQNPhEeazk9R8lTh06A" org.eventb.core.identifier="autorisation"/>
-<org.eventb.core.axiom name="_fyTPgNPhEeazk9R8lTh06A" org.eventb.core.label="auto" org.eventb.core.predicate="autorisation ∈ Personne→ ℙ(Zone)"/>
-<org.eventb.core.axiom name="_1Y2yINPqEeazk9R8lTh06A" org.eventb.core.label="auto_ext" org.eventb.core.predicate="∀p·p∈Personne⇒ Exterieur ∈ autorisation(p)"/>
+<org.eventb.core.axiom name="_fyTPgNPhEeazk9R8lTh06A" org.eventb.core.comment="une personne a un ensemble de zones autorisées" org.eventb.core.label="auto" org.eventb.core.predicate="autorisation ∈ Personne→ ℙ(Zone)"/>
+<org.eventb.core.axiom name="_1Y2yINPqEeazk9R8lTh06A" org.eventb.core.comment="l'extétieur fait partie des zones autorisées" org.eventb.core.label="auto_ext" org.eventb.core.predicate="∀p·p∈Personne⇒ Exterieur ∈ autorisation(p)"/>
 </org.eventb.core.contextFile>

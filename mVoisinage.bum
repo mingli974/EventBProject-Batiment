@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1484170576960" org.eventb.texttools.text_representation="machine mVoisinage refines mSecurite sees cVoisinage&#10;variables position&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event entrer_batiment extends entrer_batiment&#10;  end&#10;  event sortir_batiment extends sortir_batiment&#10;  end&#10;  event suivre_sortie extends suivre_sortie&#10;  end&#10;  event passer refines passer&#10;  any p depart arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@arrivee_ty arrivee ∈ Zone∖{Exterieur,depart}&#10;  &#9;&#9;@depart_ty depart ∈ Zone&#10;  &#9;&#9;@g1 position(p)= depart&#10;  &#9;&#9;@g2 arrivee ∈ autorisation(p)&#10;  &#9;&#9;@g3 arrivee ∈ {communicante(depart)}&#10;  &#9;then&#10;&#9;&#9;@a position(p) ≔ arrivee&#10;  end&#10;end&#10;" version="5">
+<org.eventb.core.refinesMachine name="_znfW4Ng3EeaAZrPssp1vIw" org.eventb.core.target="mSecurite"/>
+<org.eventb.core.seesContext name="_znf98Ng3EeaAZrPssp1vIw" org.eventb.core.target="cVoisinage"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="_5lFWsNg3EeaAZrPssp1vIw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrer_batiment">
+<org.eventb.core.refinesEvent name="_5lF9wNg3EeaAZrPssp1vIw" org.eventb.core.target="entrer_batiment"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_5lF9wdg3EeaAZrPssp1vIw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir_batiment">
+<org.eventb.core.refinesEvent name="_5lGk0Ng3EeaAZrPssp1vIw" org.eventb.core.target="sortir_batiment"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_5lGk0dg3EeaAZrPssp1vIw" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivre_sortie">
+<org.eventb.core.refinesEvent name="__vYVwNg3EeaAZrPssp1vIw" org.eventb.core.target="suivre_sortie"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="_I_eBENg4EeaAZrPssp1vIw" org.eventb.core.identifier="position"/>
+<org.eventb.core.event name="_QKKGINg4EeaAZrPssp1vIw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="passer">
+<org.eventb.core.refinesEvent name="_QKKtMNg4EeaAZrPssp1vIw" org.eventb.core.target="passer"/>
+<org.eventb.core.parameter name="_jH_9QNhFEea6zMQgOLSiLQ" org.eventb.core.identifier="p"/>
+<org.eventb.core.parameter name="_jH_9QdhFEea6zMQgOLSiLQ" org.eventb.core.identifier="depart"/>
+<org.eventb.core.parameter name="_jH_9QthFEea6zMQgOLSiLQ" org.eventb.core.identifier="arrivee"/>
+<org.eventb.core.guard name="_jIAkUNhFEea6zMQgOLSiLQ" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
+<org.eventb.core.guard name="_jIAkUdhFEea6zMQgOLSiLQ" org.eventb.core.label="arrivee_ty" org.eventb.core.predicate="arrivee ∈ Zone∖{Exterieur,depart}"/>
+<org.eventb.core.guard name="_jIBycNhFEea6zMQgOLSiLQ" org.eventb.core.label="depart_ty" org.eventb.core.predicate="depart ∈ Zone"/>
+<org.eventb.core.guard name="_jIBycdhFEea6zMQgOLSiLQ" org.eventb.core.label="g1" org.eventb.core.predicate="position(p)= depart"/>
+<org.eventb.core.guard name="_jICZgNhFEea6zMQgOLSiLQ" org.eventb.core.label="g2" org.eventb.core.predicate="arrivee ∈ autorisation(p)"/>
+<org.eventb.core.action name="_jICZgdhFEea6zMQgOLSiLQ" org.eventb.core.assignment="position(p) ≔ arrivee" org.eventb.core.label="a"/>
+<org.eventb.core.guard name="_r8B-sNhFEea6zMQgOLSiLQ" org.eventb.core.label="g3" org.eventb.core.predicate="arrivee ∈ {communicante(depart)}"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483691823704" org.eventb.texttools.text_representation="machine mZoneFusion refines mZone  sees cZone&#10;variables position&#10;invariants&#10;@position_ty position∈ Personne→Zone&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event sortir_batiment extends sortir_batiment&#10;  end&#10;  event changer_zone refines changer_zone entrer_batiment&#10;  &#9;any p depart arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@arrivee_ty arrivee ∈ Zone∖{Exterieur,depart}&#10;  &#9;&#9;@depart_ty depart ∈ Zone&#10;  &#9;&#9;@g1 position(p)= depart&#10;  &#9;then&#10;&#9;&#9;@a position(p) ≔ arrivee&#10;  end&#10;  event suivre_sortie extends suivre_sortie&#10;&#10;  end&#10;end" version="5">
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1483897733407" org.eventb.texttools.text_representation="machine mZoneFusion refines mZone  sees cZone&#10;variables position&#10;invariants&#10;@position_ty position∈ Personne→Zone&#10;events&#10;  event INITIALISATION extends INITIALISATION&#10;  end&#10;  event entrer_batiment extends entrer_batiment&#10;  end&#10;  event sortir_batiment extends sortir_batiment&#10;  end&#10;  event changer_zone refines changer_zone entrer_batiment&#10;  &#9;any p depart arrivee where&#10;  &#9;&#9;@p_ty p∈Personne&#10;  &#9;&#9;@arrivee_ty arrivee ∈ Zone∖{Exterieur,depart}&#10;  &#9;&#9;@depart_ty depart ∈ Zone&#10;  &#9;&#9;@g1 position(p)= depart&#10;  &#9;then&#10;&#9;&#9;@a position(p) ≔ arrivee&#10;  end&#10;  event suivre_sortie extends suivre_sortie&#10;  end&#10;end" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="mZone"/>
 <org.eventb.core.seesContext name="_NcR6cL3oEeadiuo1wvDUBA" org.eventb.core.target="cZone"/>
 <org.eventb.core.variable name="_-ZaQ0L3qEeadiuo1wvDUBA" org.eventb.core.identifier="position"/>
 <org.eventb.core.event name="_NcR6cL3oEeadiuo1wvDUBB" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
-<org.eventb.core.event name="_NcR6cL3oEeadiuo1wvDUBC" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir_batiment">
-<org.eventb.core.refinesEvent name="_D9bNENNiEea-_IsPEWhWKg" org.eventb.core.target="sortir_batiment"/>
+<org.eventb.core.event name="_NcR6cL3oEeadiuo1wvDUBC" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="entrer_batiment">
+<org.eventb.core.refinesEvent name="_DaOIcdXKEea26oeQIULimg" org.eventb.core.target="entrer_batiment"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="_NcR6cL3oEeadiuo1wvDUBD" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="changer_zone">
-<org.eventb.core.refinesEvent name="_D9b0INNiEea-_IsPEWhWKg" org.eventb.core.target="changer_zone"/>
-<org.eventb.core.refinesEvent name="_D9b0IdNiEea-_IsPEWhWKg" org.eventb.core.target="entrer_batiment"/>
-<org.eventb.core.guard name="_3N0DsNNdEeahqsgRTa1UHw" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
-<org.eventb.core.guard name="_3N0DsdNdEeahqsgRTa1UHw" org.eventb.core.label="arrivee_ty" org.eventb.core.predicate="arrivee ∈ Zone∖{Exterieur,depart}"/>
+<org.eventb.core.invariant name="_3N3uENNdEeahqsgRTa1UHw" org.eventb.core.label="position_ty" org.eventb.core.predicate="position∈ Personne→Zone"/>
+<org.eventb.core.event name="_uFvBsNXKEea26oeQIULimg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="sortir_batiment">
+<org.eventb.core.refinesEvent name="_uFvBsdXKEea26oeQIULimg" org.eventb.core.target="sortir_batiment"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="_uFvBstXKEea26oeQIULimg" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="changer_zone">
+<org.eventb.core.refinesEvent name="_uFvowNXKEea26oeQIULimg" org.eventb.core.target="changer_zone"/>
+<org.eventb.core.refinesEvent name="_uFvowdXKEea26oeQIULimg" org.eventb.core.target="entrer_batiment"/>
 <org.eventb.core.parameter name="_3NzcodNdEeahqsgRTa1UHw" org.eventb.core.identifier="p"/>
 <org.eventb.core.parameter name="_qwz7ANNeEeahqsgRTa1UHw" org.eventb.core.identifier="depart"/>
 <org.eventb.core.parameter name="_3NzcoNNdEeahqsgRTa1UHw" org.eventb.core.identifier="arrivee"/>
+<org.eventb.core.guard name="_3N0DsNNdEeahqsgRTa1UHw" org.eventb.core.label="p_ty" org.eventb.core.predicate="p∈Personne"/>
+<org.eventb.core.guard name="_3N0DsdNdEeahqsgRTa1UHw" org.eventb.core.label="arrivee_ty" org.eventb.core.predicate="arrivee ∈ Zone∖{Exterieur,depart}"/>
 <org.eventb.core.guard name="_3N1R0NNdEeahqsgRTa1UHw" org.eventb.core.label="depart_ty" org.eventb.core.predicate="depart ∈ Zone"/>
 <org.eventb.core.guard name="_3NzcotNdEeahqsgRTa1UHw" org.eventb.core.label="g1" org.eventb.core.predicate="position(p)= depart"/>
 <org.eventb.core.action name="_3Ny1kNNdEeahqsgRTa1UHw" org.eventb.core.assignment="position(p) ≔ arrivee" org.eventb.core.label="a"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="_3N3uENNdEeahqsgRTa1UHw" org.eventb.core.label="position_ty" org.eventb.core.predicate="position∈ Personne→Zone"/>
-<org.eventb.core.event name="_6igqcNNkEea-_IsPEWhWKg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivre_sortie">
-<org.eventb.core.refinesEvent name="_6igqcdNkEea-_IsPEWhWKg" org.eventb.core.target="suivre_sortie"/>
+<org.eventb.core.event name="_uFzTINXKEea26oeQIULimg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="suivre_sortie">
+<org.eventb.core.refinesEvent name="_uFzTIdXKEea26oeQIULimg" org.eventb.core.target="suivre_sortie"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

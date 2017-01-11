@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
+<org.eventb.core.poFile org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
 <org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
 <org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q"/>
@@ -7,7 +7,7 @@
 <org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
 <org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/cZone.bpo|org.eventb.core.poFile#cZone|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/cZone.bpo|org.eventb.core.poFile#cZone|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="5">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_4WCIoNNgEeahqsgRTa1UHw"/>

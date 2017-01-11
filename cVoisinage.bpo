@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_4WCIoNNgEeahqsgRTa1UHw"/>
+<org.eventb.core.poIdentifier name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+<org.eventb.core.poPredicate name="autorisatioo" org.eventb.core.predicate="autorisation∈Personne → ℙ(Zone)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_fyTPgNPhEeazk9R8lTh06A"/>
+<org.eventb.core.poPredicate name="autorisatiop" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A"/>
+<org.eventb.core.poIdentifier name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poIdentifier name="montreExterieur" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="a_pasmoi/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#HYPcSecuritf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z∈dom(communicante)∧communicante∈Zone ⇸ Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU4QQNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU4QQNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#HYPcSecuritf"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="a_voisinexterieur/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#HYPcSecurith"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_qiTdkNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_qiTdkNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#HYPcSecurith"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYPcSecuritf" org.eventb.core.parentSet="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="communicante∈Zone ⤖ Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_iEF7INXSEea26oeQIULimg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPcSecurith" org.eventb.core.parentSet="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#HYPcSecuritf" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z∉{communicante(z)}" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU4QQNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="montreExterieur∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU43UNhDEeaAZrPssp1vIw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/cVoisinage.bpo|org.eventb.core.poFile#cVoisinage|org.eventb.core.poPredicateSet#HYPcSecurith" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ montreExterieur(z)∈communicante" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_qiTdkNhDEeaAZrPssp1vIw"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

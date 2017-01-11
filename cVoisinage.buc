@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" org.eventb.texttools.text_lastmodified="1484170648572" org.eventb.texttools.text_representation="context cVoisinage extends cSecurite&#10;constants communicante montreExterieur&#10;axioms&#10;  @a_voisin communicante∈ Zone⤖Zone //une zone communicante est une zone qui communique avec une autre&#10;  @a_pasmoi ∀z·z∈Zone ⇒  z∉{communicante(z)} //je ne peux pas communiquer avec moi-même&#10;  @a_exterieur montreExterieur ∈ Zone∖{Exterieur}→Zone//l'ensemble des zones qui montre l'extérieur&#10;  @a_voisinexterieur ∀ z · z ∈ Zone∖{Exterieur} ⇒  z↦ montreExterieur(z)∈communicante&#10;end&#10;" version="3">
+<org.eventb.core.extendsContext name="_ZU6kgNXSEea26oeQIULimg" org.eventb.core.target="cSecurite"/>
+<org.eventb.core.constant name="_ZU7LkNXSEea26oeQIULimg" org.eventb.core.identifier="communicante"/>
+<org.eventb.core.axiom name="_iEF7INXSEea26oeQIULimg" org.eventb.core.comment="une zone communicante est une zone qui communique avec une autre" org.eventb.core.label="a_voisin" org.eventb.core.predicate="communicante∈ Zone⤖Zone"/>
+<org.eventb.core.axiom name="_SU4QQNhDEeaAZrPssp1vIw" org.eventb.core.comment="je ne peux pas communiquer avec moi-même" org.eventb.core.label="a_pasmoi" org.eventb.core.predicate="∀z·z∈Zone ⇒  z∉{communicante(z)}"/>
+<org.eventb.core.axiom name="_SU43UNhDEeaAZrPssp1vIw" org.eventb.core.comment="l'ensemble des zones qui montre l'extérieur" org.eventb.core.label="a_exterieur" org.eventb.core.predicate="montreExterieur ∈ Zone∖{Exterieur}→Zone"/>
+<org.eventb.core.axiom name="_qiTdkNhDEeaAZrPssp1vIw" org.eventb.core.label="a_voisinexterieur" org.eventb.core.predicate="∀ z · z ∈ Zone∖{Exterieur} ⇒  z↦ montreExterieur(z)∈communicante"/>
+<org.eventb.core.constant name="_1e2qsNhDEeaAZrPssp1vIw" org.eventb.core.identifier="montreExterieur"/>
+</org.eventb.core.contextFile>

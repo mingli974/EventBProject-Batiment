@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="a_pasmoi/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="z" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Zone">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees z)" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p12">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="(∀z⦂Zone·z∈dom(communicante))∧communicante∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="z∈dom(communicante)">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z∈dom(communicante)∧communicante∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="∀p⦂Personne·⊤⇒Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="Exterieur∈Zone">
+<org.eventb.core.prIdent name="Exterieur" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀z⦂Zone·⊤⇒z∈dom(communicante)∧communicante∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀p⦂Personne·Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="communicante∈Zone ⤖ Zone"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="z∈Zone">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀z⦂Zone·z∈dom(communicante)"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="communicante∈Zone ⇸ Zone"/>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="Zone"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="voisVois/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="z" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Zone">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees z)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p11">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p14">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.prIdent name="montreExterieur" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒communicante(z) ↦ z∉communicante">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="montreExterieur∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀z⦂Zone·⊤⇒¬communicante(z) ↦ z∈communicante">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀p⦂Personne·⊤⇒Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Exterieur∈Zone"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}⇒z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="montreExterieur∈Zone ∖ {Exterieur} → Zone"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="z∈dom(montreExterieur)">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀p⦂Personne·Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀z⦂Zone·¬communicante(z) ↦ z∈communicante">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒¬communicante(z) ↦ z∈communicante">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="Zone ∖ {Exterieur}"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="a_voisinexterieur/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="z" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Zone">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∀ goal (frees z)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⇒ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="p11">
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p12" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p13">
+<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="total function dom substitution in goal" org.eventb.core.prGoal="p13" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r6" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p11" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue="1"/>
+<org.eventb.core.prExprRef name=".subst" org.eventb.core.prRef="e0"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p14">
+<org.eventb.core.prRule name="r7" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="functional goal" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.prIdent name="montreExterieur" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒¬z=communicante(z)">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="montreExterieur∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="∀p⦂Personne·⊤⇒Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Exterieur∈Zone"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="∀z⦂Zone·⊤⇒¬z=communicante(z)">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}⇒z∈dom(montreExterieur)∧montreExterieur∈Zone ⇸ Zone">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="∀z⦂Zone·¬z=communicante(z)">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="montreExterieur∈Zone ∖ {Exterieur} → Zone"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="z∈dom(montreExterieur)">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="∀p⦂Personne·Exterieur∈autorisation(p)">
+<org.eventb.core.prIdent name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.prIdent name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="z∈Zone ∖ {Exterieur}">
+<org.eventb.core.prIdent name="z" org.eventb.core.type="Zone"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z∉{communicante(z)}">
+<org.eventb.core.prIdent name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prExpr name="e0" org.eventb.core.expression="Zone ∖ {Exterieur}"/>
+<org.eventb.core.prReas name="r7" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.allI"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.impI"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r6" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Batiment/cSecurite.bcc|org.eventb.core.scContextFile#cSecurite" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.extendsContext#_ZU6kgNXSEea26oeQIULimg"/>
+<org.eventb.core.scInternalContext name="cAccess">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="F,Personne" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="Personne" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.carrierSet#_6lraIL3iEeadYayNSMJp4Q" org.eventb.core.type="ℙ(Personne)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="cZone">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Batiment/cAccess.bcc|org.eventb.core.scContextFile#cAccess" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.extendsContext#_G21s8L3nEeadiuo1wvDUBA"/>
+<org.eventb.core.scAxiom name="cAccest" org.eventb.core.label="F,Zone" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cAccesu" org.eventb.core.label="exterieur_ty" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cAccesv" org.eventb.core.label="sortie" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_4WCIoNNgEeahqsgRTa1UHw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Exterieur" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.constant#_3QDv4L3nEeadiuo1wvDUBA" org.eventb.core.type="Zone"/>
+<org.eventb.core.scCarrierSet name="Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.carrierSet#_YRBr4L3nEeadiuo1wvDUBA" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.scConstant name="sortie" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.constant#_vAPd8NNgEeahqsgRTa1UHw" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scInternalContext name="cSecurite">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/Batiment/cZone.bcc|org.eventb.core.scContextFile#cZone" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.extendsContext#_FNJV0NPhEeazk9R8lTh06A"/>
+<org.eventb.core.scAxiom name="cAccest" org.eventb.core.label="auto" org.eventb.core.predicate="autorisation∈Personne → ℙ(Zone)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_fyTPgNPhEeazk9R8lTh06A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cAccesu" org.eventb.core.label="auto_ext" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="autorisation" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.constant#_JMpRQNPhEeazk9R8lTh06A" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="cSecuritf" org.eventb.core.label="a_voisin" org.eventb.core.predicate="communicante∈Zone ⤖ Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_iEF7INXSEea26oeQIULimg" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cSecuritg" org.eventb.core.label="a_pasmoi" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z∉{communicante(z)}" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU4QQNhDEeaAZrPssp1vIw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cSecurith" org.eventb.core.label="a_exterieur" org.eventb.core.predicate="montreExterieur∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU43UNhDEeaAZrPssp1vIw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="cSecuriti" org.eventb.core.label="a_voisinexterieur" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ montreExterieur(z)∈communicante" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_qiTdkNhDEeaAZrPssp1vIw" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="communicante" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.constant#_ZU7LkNXSEea26oeQIULimg" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.scConstant name="montreExterieur" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.constant#_1e2qsNhDEeaAZrPssp1vIw" org.eventb.core.type="ℙ(Zone×Zone)"/>
+</org.eventb.core.scContextFile>

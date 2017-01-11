@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="24" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="sortir_batiment/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="27" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="changer_zone/g1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="changer_zone/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="changer_zone/MRG" org.eventb.core.confidence="1000" org.eventb.core.poStamp="28" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="suivre_sortie/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="29" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="37" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="entrer_batiment/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="sortir_batiment/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="changer_zone/g1/WD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="changer_zone/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="changer_zone/MRG" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="suivre_sortie/position_ty/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

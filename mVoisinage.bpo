@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q"/>
+<org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
+<org.eventb.core.poIdentifier name="Exterieur" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="sortie" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="Exterieus" org.eventb.core.predicate="finite(Zone)" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_YRCS8L3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieut" org.eventb.core.predicate="Exterieur∈Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_3QDv4b3nEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_4WCIoNNgEeahqsgRTa1UHw"/>
+<org.eventb.core.poIdentifier name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
+<org.eventb.core.poPredicate name="autorisatioo" org.eventb.core.predicate="autorisation∈Personne → ℙ(Zone)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_fyTPgNPhEeazk9R8lTh06A"/>
+<org.eventb.core.poPredicate name="autorisatiop" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A"/>
+<org.eventb.core.poIdentifier name="communicante" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poIdentifier name="montreExterieur" org.eventb.core.type="ℙ(Zone×Zone)"/>
+<org.eventb.core.poPredicate name="montreExterieus" org.eventb.core.predicate="communicante∈Zone ⤖ Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_iEF7INXSEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="montreExterieut" org.eventb.core.predicate="∀z⦂Zone·z∈Zone⇒z∉{communicante(z)}" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU4QQNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poPredicate name="montreExterieuu" org.eventb.core.predicate="montreExterieur∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_SU43UNhDEeaAZrPssp1vIw"/>
+<org.eventb.core.poPredicate name="montreExterieuv" org.eventb.core.predicate="∀z⦂Zone·z∈Zone ∖ {Exterieur}⇒z ↦ montreExterieur(z)∈communicante" org.eventb.core.source="/Batiment/cVoisinage.buc|org.eventb.core.contextFile#cVoisinage|org.eventb.core.axiom#_qiTdkNhDEeaAZrPssp1vIw"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="position" org.eventb.core.type="ℙ(Personne×Zone)"/>
+<org.eventb.core.poIdentifier name="presents" org.eventb.core.type="ℙ(Personne)"/>
+<org.eventb.core.poPredicate name="presentt" org.eventb.core.predicate="presents⊆Personne" org.eventb.core.source="/Batiment/mAccess.bum|org.eventb.core.machineFile#mAccess|org.eventb.core.invariant#_greFcL3jEeadYayNSMJp4Q"/>
+<org.eventb.core.poPredicate name="presentu" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_-ZaQ0b3qEeadiuo1wvDUBA"/>
+<org.eventb.core.poPredicate name="presentv" org.eventb.core.predicate="position[presents]⊆Zone ∖ {Exterieur}" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_lI_w8MLWEeac-pSiHHMcyA"/>
+<org.eventb.core.poPredicate name="presentw" org.eventb.core.predicate="presents=position∼[Zone ∖ {Exterieur}]" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.invariant#_M2d6ENXCEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="presentx" org.eventb.core.predicate="position∈Personne → Zone" org.eventb.core.source="/Batiment/mZoneFusion.bum|org.eventb.core.machineFile#mZoneFusion|org.eventb.core.invariant#_3N3uENNdEeahqsgRTa1UHw"/>
+<org.eventb.core.poPredicate name="presenty" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒{position(p)}⊆autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.invariant#_Wp8AAdPlEeazk9R8lTh06A"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcVoisinagf" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcVoisinagf" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTIDENTcVoisinagf" org.eventb.core.poStamp="17"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTcVoisinagg" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="arrivee" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcVoisinagg" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTIDENTcVoisinagg" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNX2YNPhEeazk9R8lTh06A|org.eventb.core.guard#_HBYSkdPsEeazk9R8lTh06A"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrivee∈Zone" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNX2YNPhEeazk9R8lTh06A|org.eventb.core.guard#_HBY5oNPsEeazk9R8lTh06A"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)=Exterieur" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNX2YNPhEeazk9R8lTh06A|org.eventb.core.guard#_bFiRwNXLEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(p)≠arrivee" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNX2YNPhEeazk9R8lTh06A|org.eventb.core.guard#_GAsJgNXMEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="arrivee∈autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_vNX2YNPhEeazk9R8lTh06A|org.eventb.core.guard#_U2pbsdXNEea26oeQIULimg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcVoisinagh" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcVoisinagh" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTIDENTcVoisinagh" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_FA02cMLdEeac-pSiHHMcyA|org.eventb.core.guard#_FA1dgMLdEeac-pSiHHMcyA"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="position(p)≠Exterieur" org.eventb.core.source="/Batiment/mZone.bum|org.eventb.core.machineFile#mZone|org.eventb.core.event#_FA02cMLdEeac-pSiHHMcyA|org.eventb.core.guard#_FA1dgcLdEeac-pSiHHMcyA"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTcVoisinagi" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="arrivee" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcVoisinagi" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTIDENTcVoisinagi" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_bDYDsNXNEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrivee∈Zone ∖ {Exterieur}" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_-hNjYNXPEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="position(p)∈Zone ∖ {arrivee,Exterieur}" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_-hNjYdXPEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="sortie(position(p))∈Zone ∖ {Exterieur}" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_-hOKcNXPEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="sortie(arrivee)∈Zone ∖ {Exterieur}" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_-hOKcdXPEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="arrivee∈autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_KOVR0dXQEea26oeQIULimg"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="sortie(arrivee)∈autorisation(p)" org.eventb.core.source="/Batiment/mSecurite.bum|org.eventb.core.machineFile#mSecurite|org.eventb.core.event#_Wp8nENPlEeazk9R8lTh06A|org.eventb.core.guard#_KOV44NXQEea26oeQIULimg"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="passer/g3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTHYPcVoisinagj,"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="depart∈dom(communicante)∧communicante∈Zone ⇸ Zone" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_r8B-sNhFEea6zMQgOLSiLQ"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_r8B-sNhFEea6zMQgOLSiLQ"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTHYPcVoisinagj,"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTcVoisinagj" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="arrivee" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="depart" org.eventb.core.type="Zone"/>
+<org.eventb.core.poIdentifier name="p" org.eventb.core.type="Personne"/>
+<org.eventb.core.poIdentifier name="position'" org.eventb.core.type="ℙ(Personne×Zone)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPcVoisinagj," org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTIDENTcVoisinagj" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="p∈Personne" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_jIAkUNhFEea6zMQgOLSiLQ"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="arrivee∈Zone ∖ {Exterieur,depart}" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_jIAkUdhFEea6zMQgOLSiLQ"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="depart∈Zone" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_jIBycNhFEea6zMQgOLSiLQ"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="position(p)=depart" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_jIBycdhFEea6zMQgOLSiLQ"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="arrivee∈autorisation(p)" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_jICZgNhFEea6zMQgOLSiLQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPcVoisinagj" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#EVTHYPcVoisinagj," org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="arrivee∈{communicante(depart)}" org.eventb.core.source="/Batiment/mVoisinage.bum|org.eventb.core.machineFile#mVoisinage|org.eventb.core.event#_QKKGINg4EeaAZrPssp1vIw|org.eventb.core.guard#_r8B-sNhFEea6zMQgOLSiLQ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/mVoisinage.bpo|org.eventb.core.poFile#mVoisinage|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="17"/>
+</org.eventb.core.poFile>

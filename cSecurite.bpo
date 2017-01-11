@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="5">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poFile org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="7">
 <org.eventb.core.poIdentifier name="Personne" org.eventb.core.type="ℙ(Personne)"/>
 <org.eventb.core.poPredicate name="Personnf" org.eventb.core.predicate="finite(Personne)" org.eventb.core.source="/Batiment/cAccess.buc|org.eventb.core.contextFile#cAccess|org.eventb.core.axiom#_6lsBML3iEeadYayNSMJp4Q"/>
 <org.eventb.core.poIdentifier name="Zone" org.eventb.core.type="ℙ(Zone)"/>
@@ -11,16 +11,16 @@
 <org.eventb.core.poPredicate name="Exterieuu" org.eventb.core.predicate="sortie∈Zone ∖ {Exterieur} → Zone" org.eventb.core.source="/Batiment/cZone.buc|org.eventb.core.contextFile#cZone|org.eventb.core.axiom#_4WCIoNNgEeahqsgRTa1UHw"/>
 <org.eventb.core.poIdentifier name="autorisation" org.eventb.core.type="ℙ(Personne×ℙ(Zone))"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="auto_ext/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="5">
+<org.eventb.core.poSequent name="auto_ext/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#HYPcAccest"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒p∈dom(autorisation)∧autorisation∈Personne ⇸ ℙ(Zone)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#HYPcAccest"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="HYPcAccest" org.eventb.core.parentSet="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="HYPcAccest" org.eventb.core.parentSet="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="autorisation∈Personne → ℙ(Zone)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_fyTPgNPhEeazk9R8lTh06A"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#HYPcAccest" org.eventb.core.poStamp="5">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Batiment/cSecurite.bpo|org.eventb.core.poFile#cSecurite|org.eventb.core.poPredicateSet#HYPcAccest" org.eventb.core.poStamp="7">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="∀p⦂Personne·p∈Personne⇒Exterieur∈autorisation(p)" org.eventb.core.source="/Batiment/cSecurite.buc|org.eventb.core.contextFile#cSecurite|org.eventb.core.axiom#_1Y2yINPqEeazk9R8lTh06A"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>
